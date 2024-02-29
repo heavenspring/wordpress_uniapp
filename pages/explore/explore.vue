@@ -35,7 +35,7 @@
 			</view>
 			<view>
 
-				<image class="radius" v-if="item.image.url" style="width: 160px;height: 90px;" :src="item.image.url"
+				<image class="radius" v-if="item.image" style="width: 160px;height: 90px;" :src="item.image"
 					mode=""></image>
 				<image src="../../static/images/user-bg.jpg" class="radius" style="width: 160px;height: 90px;" mode=""
 					v-else></image>
