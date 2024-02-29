@@ -20,7 +20,7 @@
 
 
 		<view class="margin-left margin-right">
-			<swiper class="screen-swiper" :class="dotStyle?'square-dot':'round-dot'" :indicator-dots="true"
+			<swiper class="screen-swiper"  :indicator-dots="true"
 				:circular="true" :autoplay="true" interval="5000" duration="500">
 				<swiper-item v-for="(item,index) in swiperList" :key="index" :data-index="index" data-type="swiper"
 					@tap="go">
@@ -45,7 +45,7 @@
 		<card-two :items="postTopData"></card-two>
 
 
-		<card-four :threadsData="threadsData" :included="threadsIncluded">{{item.data}}</card-four>
+		<card-four :threadsData="threadsData" :included="threadsIncluded"></card-four>
 
 
 
@@ -134,6 +134,7 @@
 
 
 			threads: function(page = 1) {
+				console.log('threads'); 
 				var _this = this;
 				uni.request({
 					url: BASE_API + 'dengje-minprogram/v1/post/list',
@@ -151,6 +152,7 @@
 				})
 			},
 			postTop: function() {
+				console.log('postTop'); 
 				var _this = this;
 				uni.request({
 					url: BASE_API + 'dengje-minprogram/v1/post/recommend',
@@ -168,6 +170,7 @@
 				})
 			},
 			cateList: function() {
+				console.log('cateList'); 
 				var _this = this;
 				uni.request({
 					url: BASE_API + 'wp/v2/categories',
@@ -215,6 +218,7 @@
 			},
 
 			getNavList: function() {
+				console.log('getNavList'); 
 				const _this = this;
 				uni.request({
 					url: BASE_API + 'dengje-minprogram/v1/common/config',

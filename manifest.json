@@ -1,5 +1,5 @@
 {
-    "name" : "友集博客",
+    "name" : "境界",
     "appid" : "__UNI__36D5DBE",
     "description" : "",
     "versionName" : "1.0.0",
@@ -51,10 +51,15 @@
         }
     },
     "h5" : {
-        "optimization" : {
-            "treeShaking" : {
-                "enable" : true
-            }
+        "router" : {
+            "base" : "/h5/",
+            "mode" : "history"
+        },
+        "domain" : "",
+        "title" : "境界在线",
+        "devServer" : {
+            "https" : true
         }
-    }
+    },
+    "vueVersion" : "2"
 }
