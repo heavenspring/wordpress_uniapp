@@ -17,8 +17,10 @@
 	{
 		"path": "pages/detail/detail",
 		"style": {
-			"navigationBarTitleText": "",
-			"enablePullDownRefresh": false
+			// "navigationBarTitleText": "",
+			"navigationBarTitleText": "uni-app",
+			"enablePullDownRefresh": false,
+			"navigationBarHidden":false
 		}
 
 	}, 
@@ -72,6 +74,14 @@
 	}, 
 	{
 		"path": "pages/search/search",
+		"style": {
+			"navigationBarTitleText": "",
+			"enablePullDownRefresh": false
+		}
+
+	}, 
+	{
+		"path": "pages/login/login",
 		"style": {
 			"navigationBarTitleText": "",
 			"enablePullDownRefresh": false
