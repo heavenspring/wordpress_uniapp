@@ -52,13 +52,23 @@
     },
     "h5" : {
         "router" : {
-            "base" : "/h5/",
-            "mode" : "history"
+            "base" : "",
+            "mode" : "hash"
         },
         "domain" : "",
         "title" : "境界在线",
         "devServer" : {
-            "https" : true
+            "https" : true,
+            "proxy" : {
+                "/wp-json" : {
+                    "target" : "https://eastmark.online",
+                    "changeOrigin" : true,
+                    "secure" : false,
+                    "pathRewrite" : {
+                        "^/wp-json" : ""
+                    }
+                }
+            }
         }
     },
     "vueVersion" : "2"

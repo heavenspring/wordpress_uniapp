@@ -94,6 +94,7 @@
 			this.threads();
 			this.postTop();
 			this.getNavList();
+			this.postTest();
 
 
 
@@ -213,6 +214,20 @@
 					method: "GET",
 					success(res) {
 						_this.swiperList = res.data;
+					}
+				})
+			},
+			
+			postTest:function(){
+				uni.request({
+					url: BASE_API + 'dengje-minprogram/v1/common/login',
+					data: {
+						login: 'yangwenjun',
+						pass:'12345678'
+					},
+					method: "POST",
+					success(res) {
+						console.log(res)
 					}
 				})
 			},
